@@ -17,7 +17,7 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 bot.on('message', (msg) => {
     
 	var Hi = "hi";
-	if (msg.text.toString().toLowerCase().includes(Hi) === 0) {
+	if (msg.text.toString().toLowerCase().includes(Hi)) {
 		bot.sendMessage(msg.chat.id,"Hello dear user");
 	} 
     
