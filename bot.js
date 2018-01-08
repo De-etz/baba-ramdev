@@ -16,13 +16,12 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
 bot.onText(/^/, function (msg) {
 	
-	if (msg.text.toString().toLowerCase().includes('hi') {
-		var name = msg.from.first_name;
-		bot.sendMessage(msg.chat.id, 'Hello, ' + name + '!').then(function () {
-			// reply sent!
-		});
-	}
 	
+	
+	var name = msg.from.first_name;
+	bot.sendMessage(msg.chat.id, msg).then(function () {
+		// reply sent!
+	});
 });
 
 module.exports = bot;
