@@ -19,7 +19,7 @@ bot.on('message', (msg) => {
 	var firstname = msg.from.first_name;
 	
 	if (txt.includes('hi') || txt.includes('namaste') || txt.includes('hey') || txt.includes('hello')) {
-		bot.sendMessage(msg.chat.id, "Namaste, "+name+" Ji.");
+		bot.sendMessage(msg.chat.id, "Namaste, "+firstname+" Ji.");
 	} 
     
 });
