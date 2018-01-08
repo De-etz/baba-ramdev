@@ -16,10 +16,10 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
 bot.on('message', (msg) => {
     var txt = msg.text.toString().toLowerCase()
-	var name = msg.from.first_name;
+	var firstname = msg.from.first_name;
 	
 	if (txt.includes('hi') || txt.includes('namaste') || txt.includes('hey') || txt.includes('hello')) {
-		bot.sendMessage(msg.chat.id, "Namaste,"+name+" Ji.");
+		bot.sendMessage(msg.chat.id, "Namaste, "+name+" Ji.");
 	} 
     
 });
