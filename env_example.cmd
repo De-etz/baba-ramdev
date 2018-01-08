@@ -1,3 +1,3 @@
 @echo=off
 SET NODE_ENV=development
-SET TOKEN=your token here
+SET TOKEN=311520970:AAFGMbKXrW4xSbJDq8JKLmuSH6Z8H7akVwM
