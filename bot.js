@@ -18,7 +18,7 @@ bot.on('message', (msg) => {
     var txt = msg.text.toString().toLowerCase()
 	var firstname = msg.from.first_name;
 	
-	if (txt.includes('hi') || txt.includes('namaste') || txt.includes('hey') || txt.includes('hello')) {
+	if (txt.includes('hi') || txt.includes('namaste') || txt.includes('hey') || txt.includes('hello') && txt.includes{'baba') || txt.includes('ramdev') || txt.includes('terimaabot')) {
 		bot.sendMessage(msg.chat.id, "Namaste, "+firstname+" Ji.");
 	} 
     
