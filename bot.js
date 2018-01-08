@@ -15,10 +15,11 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
 
 bot.on('message', (msg) => {
-    
-	var Hi = "hi";
-	if (msg.text.toString().toLowerCase().includes(Hi)) {
-		bot.sendMessage(msg.chat.id,"Hello dear user");
+    var txt = msg.text.toString().toLowerCase()
+	var name = msg.from.first_name;
+	
+	if (txt.includes('hi') || txt.includes('namaste') || ) {
+		bot.sendMessage(msg.chat.id, "Namaste,"+name+" Ji!");
 	} 
     
 });
