@@ -14,14 +14,13 @@ else {
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
 
-bot.onText(/^/, function (msg) {
-	
-	
-	
-	var name = msg.from.first_name;
-	bot.sendMessage(msg.chat.id, msg).then(function () {
-		// reply sent!
-	});
+bot.on('message', (msg) => {
+    
+	var Hi = "hi";
+	if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
+		bot.sendMessage(msg.chat.id,"Hello dear user");
+	} 
+    
 });
 
 module.exports = bot;
