@@ -34,7 +34,8 @@ bot.on('message', (msg) => {
 			bot.sendMessage(msg.chat.id, "Namaste, "+firstname+" Ji.");
 		}
 	} else if (txt.indexOf(slap) === 0) {
-		bot.sendMessage(slapper.generateSlap(firstname, msg.reply_to_message.from.first_name));
+		bot.sendMessage("Yo");
+		// bot.sendMessage(slapper.generateSlap(firstname, msg.reply_to_message.from.first_name));
 	}
     
 });
