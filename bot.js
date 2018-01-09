@@ -37,14 +37,13 @@ bot.on('message', (msg) => {
 		}
 	} else if (txt === slap) {
 		bot.sendMessage("Yo");
-		// bot.sendMessage(slapper.generateSlap(firstname, msg.reply_to_message.from.first_name));
 	}
     
 });
 
 bot.onText(/\/slap/, (msg) => {
 
-	bot.sendMessage(msg.chat.id, "Welcome");
+	bot.sendMessage(slapper.generateSlap(firstname, msg.reply_to_message.from.first_name));
     
 });
 
