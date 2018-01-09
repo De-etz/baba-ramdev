@@ -1,4 +1,7 @@
+var plug = './plugins/';
 var token = process.env.TOKEN;
+
+var slapper = require(plug+'slap.js');
 
 var Bot = require('node-telegram-bot-api');
 var bot;
@@ -29,7 +32,9 @@ bot.on('message', (msg) => {
 		if (txt.includes('baba') || txt.includes('ramdev') || txt.includes('terimaabot')) {
 			bot.sendMessage(msg.chat.id, "Namaste, "+firstname+" Ji.");
 		}
-	} 
+	} else if (txt.indexOf(slap) === 0) {
+		
+	}
     
 });
 
