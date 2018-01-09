@@ -29,6 +29,8 @@ bot.on('message', (msg) => {
     var txt = msg.text.toString().toLowerCase()
 	var firstname = msg.from.first_name;
 	
+	
+	
 	if (txt.includes('hi') || txt.includes('namaste') || txt.includes('hey') || txt.includes('hello')) {
 		if (txt.includes('baba') || txt.includes('ramdev') || txt.includes('terimaabot')) {
 			bot.sendMessage(msg.chat.id, "Namaste, "+firstname+" Ji.");
@@ -37,6 +39,12 @@ bot.on('message', (msg) => {
 		bot.sendMessage("Yo");
 		// bot.sendMessage(slapper.generateSlap(firstname, msg.reply_to_message.from.first_name));
 	}
+    
+});
+
+bot.onText(/\/slap/, (msg) => {
+
+	bot.sendMessage(msg.chat.id, "Welcome");
     
 });
 
