@@ -45,9 +45,11 @@ bot.onText(/\/displayInfo, (msg) => {
 	bot.sendMessage(msg.chat.id, JSON.stringify(msg));
 
 bot.onText(/\/slap/, (msg) => {
-
-	bot.sendMessage(msg.chat.id, generateSlap(msg.from.first_name, msg.reply_to_message.from.first_name));
-    
+	try {
+		bot.sendMessage(msg.chat.id, generateSlap(msg.from.first_name, msg.reply_to_message.from.first_name));
+    } catch (err) {
+		bot.sendMessage(msg.chat.id, 'Error: ' + err.message);
+	}
 });
 
 
