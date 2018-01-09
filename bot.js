@@ -23,6 +23,7 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
+var slap = '/slap';
 
 bot.on('message', (msg) => {
     var txt = msg.text.toString().toLowerCase()
@@ -33,7 +34,7 @@ bot.on('message', (msg) => {
 			bot.sendMessage(msg.chat.id, "Namaste, "+firstname+" Ji.");
 		}
 	} else if (txt.indexOf(slap) === 0) {
-		
+		bot.sendMessage(slapper.generateSlap(firstname, msg.reply_to_message.from.first_name));
 	}
     
 });
