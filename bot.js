@@ -26,6 +26,7 @@ console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 var slap = '/slap';
 
 bot.on('message', (msg) => {
+	try {
     var txt = msg.text.toString().toLowerCase()
 	var firstname = msg.from.first_name;
 	
@@ -38,7 +39,9 @@ bot.on('message', (msg) => {
 	} else if (txt === slap) {
 		bot.sendMessage("Yo");
 	}
-    
+    } catch (err) {
+		bot.sendMessage(msg.chat.id, 'Error: ' + err.message);
+	}
 });
 
 // bot.onText(/\/displayInfo, (msg) => {
@@ -49,7 +52,7 @@ bot.onText(/\/slap/, (msg) => {
 	try {
 		bot.sendMessage(msg.chat.id, slapper.generateSlap(msg.from.first_name, msg.reply_to_message.from.first_name),{parse_mode : "HTML"});
     } catch (err) {
-		// bot.sendMessage(msg.chat.id, 'Error: ' + err.message);
+		bot.sendMessage(msg.chat.id, 'Error: ' + err.message);
 	}
 });
 
