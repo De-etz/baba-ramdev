@@ -47,7 +47,7 @@ bot.on('message', (msg) => {
 
 bot.onText(/\/slap/, (msg) => {
 	try {
-		bot.sendMessage(msg.chat.id, generateSlap(msg.from.first_name, msg.reply_to_message.from.first_name));
+		bot.sendMessage(msg.chat.id, slapper.generateSlap(msg.from.first_name, msg.reply_to_message.from.first_name));
     } catch (err) {
 		bot.sendMessage(msg.chat.id, 'Error: ' + err.message);
 	}
