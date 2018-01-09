@@ -71,9 +71,9 @@ module.exports.generateSlap = function generateSlap(attacker, victim) {
 		if (currentChar == '$') {
 			i++;
 			if (phrase.charAt(i) == 'v') {
-				slapPhrase += victim;
+				slapPhrase += "<b>"+victim+"</b>";
 			} else {
-				slapPhrase += attacker;
+				slapPhrase += "<b>"+attacker+"</b>";
 			}
 		} else {
 			slapPhrase += currentChar;
