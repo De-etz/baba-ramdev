@@ -43,7 +43,7 @@ bot.on('message', (msg) => {
 
 bot.onText(/\/slap/, (msg) => {
 
-	bot.sendMessage(msg.toString());
+	bot.sendMessage("Hi");
     
 });
 
