@@ -41,9 +41,9 @@ bot.on('message', (msg) => {
     
 });
 
-bot.onText(/\/displayInfo, (msg) => {
-	bot.sendMessage(msg.chat.id, JSON.stringify(msg));
-}
+// bot.onText(/\/displayInfo, (msg) => {
+	// bot.sendMessage(msg.chat.id, JSON.stringify(msg));
+// }
 
 bot.onText(/\/slap/, (msg) => {
 	try {
