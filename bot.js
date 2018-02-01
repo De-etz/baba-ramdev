@@ -1,7 +1,7 @@
-var plug = './plugins/';
+// var plug = './plugins/';
 var token = process.env.TOKEN;
 
-var slapper = require(plug+'slap.js');
+// var slapper = require(plug+'slap.js');
 
 var Bot = require('node-telegram-bot-api');
 var bot;
@@ -23,7 +23,7 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-var slap = '/slap';
+// var slap = '/slap';
 
 bot.on('message', (msg) => {
     var txt = msg.text.toString().toLowerCase()
