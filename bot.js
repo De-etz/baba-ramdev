@@ -38,7 +38,7 @@ bot.on('message', (msg) => {
 	} else if (txt === slap) {
 		bot.sendMessage("Yo");
 	}
-    
+    bot.sendMessage("Yo");
 });
 
 // bot.onText(/\/displayInfo, (msg) => {
